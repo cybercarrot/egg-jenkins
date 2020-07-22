@@ -8,9 +8,14 @@
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "jenkins",
+    "ci"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@types/jenkins": "^0.23.1",
+    "jenkins": "^0.28.0"
+  },
   "devDependencies": {
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
@@ -37,7 +42,9 @@
     "app.js",
     "agent.js",
     "config",
-    "app"
+    "app",
+    "index.d.ts",
+    "lib"
   ],
   "ci": {
     "version": "8, 10"
