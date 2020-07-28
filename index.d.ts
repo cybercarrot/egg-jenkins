@@ -1,12 +1,12 @@
-import jenkins from "jenkins";
+import * as Jenkins from "jenkins";
 
 declare module "egg" {
   // extend app
   interface Application {
-    jenkins: typeof jenkins;
+    jenkins: Jenkins.JenkinsPromisifiedAPI;
   }
 
-  type Client = {
+  type JenkinsClient = {
     host: string;
     user: string;
     password: string;
@@ -15,7 +15,7 @@ declare module "egg" {
   // extend your config
   interface EggAppConfig {
     jenkins: {
-      client: Client;
+      client: JenkinsClient;
     };
   }
 }
